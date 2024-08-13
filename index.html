@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="./imagenes/Logo.png" alt="Logo de alura latam">
+    </header>
+
+    <main class="encriptador">
+        <div class="encriptador__contenido">
+            <textarea id="texto_encriptar" class="texto_encriptar" spellcheck="false" placeholder="Ingrese el texto aqui:" name="texto_encriptar" rows="11" cols="40"></textarea>
+            <p id="texto_advertencia" class="texto_advertencia"><img src="./imagenes/exclamation.png"> Solo letras minúsculas y sin acentos</p>
+            <p id="advertencia" class="advertencia"><strong>No se permiten mayúsculas ni acentos.</strong></p>
+            <button onclick="encriptarTexto()" id="boton_encriptar" class="boton_encriptar" type="button">Encriptar</button>
+            <button onclick="desencriptarTexto()" id="boton_desencriptar" class="boton_desencriptar"  type="button">Desencriptar</button>
+        </div> 
+        <div class="encriptador__mostrar">
+            <div id="encriptador__mostrar__aviso" class="encriptador__mostrar__aviso">
+                <img id="miImagen" class="encriptador__imagen" src="./imagenes/Muñeco.png" alt="Imagen de un Muñeco arrodillado buscando algo con una lupa">
+                <p id="miTexto" class="encriptador__parrafo">Ningún mensaje fue encontrado</p>
+                <label id="miEtiqueta" class="encriptador__parrafo__aviso" for="texto_encriptado">Ingresa el texto que desees encriptar o desencriptar</label>
+                <textarea id="texto_encriptado" class="texto_encriptado" name="texto_encriptado" rows="13" cols="29"></textarea>
+                <button id="boton_copiar" class="boton_copiar">Copiar</button>
+            </div>   
+        </div>
+
+    </main>    
+    <footer class="footer">
+        <p>Desarrollado por: David Ortiz -- Alura LATAM -- ONE</p>
+    </footer>
+    <script src="encriptar.js"></script>
+</body>
+</html>
